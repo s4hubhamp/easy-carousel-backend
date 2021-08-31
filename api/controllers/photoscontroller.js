@@ -6,12 +6,17 @@ exports.getPhotosByCategory = async (req, res, next) => {
     const { qty } = req.query;
 
     const response = await fetch(
-      `https://api.unsplash.com/search/photos?client_id=5F6xRIdUuQBX1556iGYD-5b-Fl8xP5wbiJk9IewNzTs&query=${category}&orientation=squarish&per_page=${
+      `https://api.unsplash.com/search/photos?client_id=5F6xRIdUuQBX1556iGYD-5b-Fl8xP5wbiJk9IewNzTsQQ&query=${category}&orientation=squarish&per_page=${
         qty || 5
       }`
     );
 
     const data = await response.json();
+
+    if (data.errors) {
+      console.dir(data.errors[0]);
+      throw new Error("Internal server error");
+    }
 
     const photos = data.results.map((searchResult) => ({
       url: searchResult.urls.regular,
