@@ -27,7 +27,5 @@ Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will not reload if you make edits.
-To reload the page on subsequent changes replace ```
-node app.js
-``` with nodemon app.js in package.json
+To reload the page on subsequent changes replace npm start script node app.js with nodemon app.js in package.json.
 You will also see any lint errors in the console.
