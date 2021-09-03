@@ -4,7 +4,7 @@
   "description": "A Node.js RESTful API for Easy Carousel",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [
     "node",
