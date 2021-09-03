@@ -4,7 +4,7 @@ ___you can visit https://easy-carousel.web.app/ to view app online.___
 
 ## Installation
 
-To install project run in project directory:
+To install project run in project directory
 
 ```
 npm i
